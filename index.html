@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trip Framer</title>
+	<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<header>
+  <h1>Trip Framer 🧳</h1>
+</header>
+
+<hr />
+
+<section class="action-buttons">
+  <button id="loadHistory">🕒 Recent Trips</button>
+  <button id="clearSelections">🗑️ Clear Trips</button>
+  <hr />
+</section>
+
+<hr />
+
+<section>
+  <label for="locationInput">Enter Location:</label>
+  <input type="text" id="locationInput" placeholder="e.g. New York, NY or 10001" />
+</section>
+
+<section>
+  <h4>Add your map venues</h4>
+
+  <div id="venueSelectors">
+  <div class="dropdown-row">
+    <select class="venue-type ">
+      <option value="">Select a venue type</option>
+      <!-- JS will populate options -->
+    </select>
+    <button class="add-btn top-row">+</button>
+    <!-- Remove button will be added dynamically except for this first row -->
+  </div>
+</div>
+  
+  <label for="customVenueInput">Or type a custom venue:</label>
+<!--   <input type="text" id="customVenue" placeholder="e.g. Jazz Bar" /> -->
+<!--   <button id="addCustomVenue">➕ Add Custom Venue</button> -->
+  
+  <div id="customVenueContainer">
+  <div class="custom-row">
+    <input type="text" id="customVenue" class="custom-value" placeholder="e.g. Jazz Bar" />
+    <button id="addCustomVenue" class="top-row">+</button>
+    <!-- "-" button added dynamically for removables -->
+  </div>
+</div>
+  
+</section>
+
+<!-- Dynamic Preview Text -->
+<section>
+  <p id="previewSelections">🔎 Your trip preview will appear here</p>
+  <hr />
+</section>
+
+<section>
+  <button id="frameTrip">📍 Frame My Trip</button>
+</section>
+
+<!-- Grid/Stacked Buttons Side-by-Side -->
+<section class="layout-options">
+  <button id="layoutGrid">🧱 Grid View</button>
+  <button id="layoutStacked">📄 Stacked View</button>
+</section>
+
+<section id="mapResults">
+  <!-- Maps will be injected -->
+</section>
+<script src="script.js"></script>
+</body>
+</html>

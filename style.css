@@ -1,31 +1,80 @@
 body {
-      font-family: sans-serif;
-      margin: 1rem;
-      background: #f6f8fa;
-    }
-    h1 {
-      text-align: center;
-    }
-    .dropdown-block {
-      margin-bottom: 1rem;
-    }
-    select, input[type="text"] {
-      width: 100%;
-      padding: 0.5rem;
-      margin-bottom: 0.5rem;
-      font-size: 1rem;
-    }
-    button {
-      padding: 0.5rem;
-      font-size: 1rem;
-      width: 100%;
-    }
-    iframe {
-      width: 100%;
-      height: 250px;
-      border: none;
-      margin-top: 1rem;
-    }
+  font-family: sans-serif;
+  margin: 1rem;
+  background: #f6f8fa;
+}
+
+.app-header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+/* Centered title */
+.app-header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+/* Theme switcher floats right */
+.theme-switcher {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  background-color: #fff;
+  padding: 0.3em 0.6em;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  font-size: 0.9em;
+}
+
+.theme-switcher label {
+  font-weight: 600;
+}
+
+#themeSelect {
+  padding: 0.3em;
+  font-size: 1em;
+}
+
+.theme-switcher label {
+  font-weight: 600;
+}
+
+#themeSelect {
+  padding: 0.3em;
+  font-size: 1em;
+}
+
+.dropdown-block {
+  margin-bottom: 1rem;
+}
+
+select, input[type="text"] {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+button {
+  padding: 0.5rem;
+  font-size: 1rem;
+  width: 100%;
+}
+
+iframe {
+  width: 100%;
+  height: 250px;
+  border: none;
+  margin-top: 1rem;
+}
 
 /* Side-by-side layout for top action buttons */
 .action-buttons {
@@ -174,3 +223,442 @@ body {
   font-size: 1em;
 }
 
+
+/* DARK MODE STYLES */
+/* DARK MODE THEME */
+.theme-dark {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
+
+/* Header and switcher */
+.theme-dark .app-header {
+  background-color: #2c2c2c;
+}
+
+.theme-dark .theme-switcher {
+  background-color: #333;
+  color: #e0e0e0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.theme-dark .theme-switcher select {
+  background-color: #444;
+  color: #e0e0e0;
+  border: 1px solid #666;
+}
+
+/* Inputs and selects */
+.theme-dark input[type="text"],
+.theme-dark select {
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+  border: 1px solid #555;
+}
+
+/* Buttons */
+.theme-dark button {
+  background-color: #3a3a3a;
+  color: #e0e0e0;
+  border: 1px solid #555;
+}
+
+.theme-dark button:hover {
+  background-color: #4a4a4a;
+}
+
+/* Preview text */
+.theme-dark #previewSelections {
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+}
+
+/* Dropdown and custom rows */
+.theme-dark .dropdown-row button,
+.theme-dark .custom-row button {
+  background-color: #3a3a3a;
+  border: 1px solid #555;
+  color: #e0e0e0;
+}
+
+.theme-dark .dropdown-row button:hover,
+.theme-dark .custom-row button:hover {
+  background-color: #4a4a4a;
+}
+
+/* Map results */
+.theme-dark #mapResults>div {
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Modal */
+.theme-dark .modal {
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.theme-dark .modal button {
+  background-color: #3a3a3a;
+  color: #e0e0e0;
+  border: 1px solid #555;
+}
+
+/* RETRO THEME */
+/* RETRO THEME */
+.theme-retro {
+  background-color: #000;
+  color: #00ff00;
+  font-family: 'Courier New', monospace;
+}
+
+/* Header and switcher */
+.theme-retro .app-header {
+  background-color: #111;
+  border-bottom: 2px dashed #00ff00;
+}
+
+.theme-retro .theme-switcher {
+  background-color: #222;
+  color: #00ff00;
+  border: 2px dashed #00ff00;
+  box-shadow: none;
+}
+
+.theme-retro .theme-switcher select {
+  background-color: #000;
+  color: #00ff00;
+  border: 1px solid #00ff00;
+}
+
+/* Inputs and selects */
+.theme-retro input[type="text"],
+.theme-retro select {
+  background-color: #000;
+  color: #00ff00;
+  border: 1px solid #00ff00;
+}
+
+/* Buttons */
+.theme-retro button {
+  background-color: #111;
+  color: #00ff00;
+  border: 2px dashed #00ff00;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.theme-retro button:hover {
+  background-color: #222;
+}
+
+/* Preview text */
+.theme-retro #previewSelections {
+  background-color: #000;
+  color: #00ff00;
+  border: 2px dashed #00ff00;
+}
+
+/* Dropdown and custom rows */
+.theme-retro .dropdown-row button,
+.theme-retro .custom-row button {
+  background-color: #111;
+  border: 2px dashed #00ff00;
+  color: #00ff00;
+}
+
+.theme-retro .dropdown-row button:hover,
+.theme-retro .custom-row button:hover {
+  background-color: #222;
+}
+
+/* Map results */
+.theme-retro #mapResults>div {
+  background-color: #000;
+  color: #00ff00;
+  border: 2px dashed #00ff00;
+}
+
+/* Modal */
+.theme-retro .modal {
+  background-color: #000;
+  color: #00ff00;
+  border: 2px dashed #00ff00;
+}
+
+.theme-retro .modal button {
+  background-color: #111;
+  color: #00ff00;
+  border: 2px dashed #00ff00;
+}
+
+/* OCEAN THEME */
+/* OCEAN THEME */
+.theme-ocean {
+  background: linear-gradient(to bottom, #e0f7fa, #b2ebf2);
+  color: #004d40;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Header and switcher */
+.theme-ocean .app-header {
+  background-color: #b2ebf2;
+  border-bottom: 2px solid #4dd0e1;
+}
+
+.theme-ocean .theme-switcher {
+  background-color: #e0f7fa;
+  color: #004d40;
+  border: 1px solid #4dd0e1;
+  box-shadow: 0 2px 6px rgba(0, 77, 64, 0.2);
+}
+
+.theme-ocean .theme-switcher select {
+  background-color: #b2ebf2;
+  color: #004d40;
+  border: 1px solid #4dd0e1;
+}
+
+/* Inputs and selects */
+.theme-ocean input[type="text"],
+.theme-ocean select {
+  background-color: #ffffff;
+  color: #004d40;
+  border: 1px solid #4dd0e1;
+}
+
+/* Buttons */
+.theme-ocean button {
+  background-color: #4dd0e1;
+  color: #ffffff;
+  border: none;
+  font-weight: 600;
+  border-radius: 6px;
+}
+
+.theme-ocean button:hover {
+  background-color: #26c6da;
+}
+
+/* Preview text */
+.theme-ocean #previewSelections {
+  background-color: #b2ebf2;
+  color: #004d40;
+  border: 1px solid #4dd0e1;
+}
+
+/* Dropdown and custom rows */
+.theme-ocean .dropdown-row button,
+.theme-ocean .custom-row button {
+  background-color: #4dd0e1;
+  color: #ffffff;
+  border: none;
+}
+
+.theme-ocean .dropdown-row button:hover,
+.theme-ocean .custom-row button:hover {
+  background-color: #26c6da;
+}
+
+/* Map results */
+.theme-ocean #mapResults>div {
+  background-color: #ffffff;
+  color: #004d40;
+  box-shadow: 0 2px 6px rgba(0, 77, 64, 0.1);
+}
+
+/* Modal */
+.theme-ocean .modal {
+  background-color: #ffffff;
+  color: #004d40;
+  box-shadow: 0 0 20px rgba(0, 77, 64, 0.2);
+}
+
+.theme-ocean .modal button {
+  background-color: #4dd0e1;
+  color: #ffffff;
+  border: none;
+}
+
+/* UNICORN THEME */
+/* UNICORN THEME */
+.theme-unicorn {
+  background-color: #fefefe;
+  color: #3a3a3a;
+  font-family: 'Georgia', serif;
+}
+
+/* Header and switcher */
+.theme-unicorn .app-header {
+  background-color: #ffffff;
+  border-bottom: 2px solid #c0c0c0;
+}
+
+.theme-unicorn .theme-switcher {
+  background-color: #ffffff;
+  color: #3a3a3a;
+  border: 1px solid #c0c0c0;
+  box-shadow: 0 2px 6px rgba(192, 192, 192, 0.3);
+}
+
+.theme-unicorn .theme-switcher select {
+  background-color: #fefefe;
+  color: #3a3a3a;
+  border: 1px solid #c0c0c0;
+}
+
+/* Inputs and selects */
+.theme-unicorn input[type="text"],
+.theme-unicorn select {
+  background-color: #ffffff;
+  color: #3a3a3a;
+  border: 1px solid #dcdcdc;
+}
+
+/* Buttons */
+.theme-unicorn button {
+  background-color: #fdf6e3;
+  /* soft gold hint */
+  color: #3a3a3a;
+  border: 1px solid #c0c0c0;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+.theme-unicorn button:hover {
+  background-color: #fceecb;
+}
+
+/* Preview text */
+.theme-unicorn #previewSelections {
+  background-color: #ffffff;
+  color: #3a3a3a;
+  border: 1px solid #dcdcdc;
+}
+
+/* Dropdown and custom rows */
+.theme-unicorn .dropdown-row button,
+.theme-unicorn .custom-row button {
+  background-color: #fdf6e3;
+  color: #3a3a3a;
+  border: 1px solid #c0c0c0;
+}
+
+.theme-unicorn .dropdown-row button:hover,
+.theme-unicorn .custom-row button:hover {
+  background-color: #fceecb;
+}
+
+/* Map results */
+.theme-unicorn #mapResults>div {
+  background-color: #ffffff;
+  color: #3a3a3a;
+  box-shadow: 0 2px 6px rgba(192, 192, 192, 0.2);
+}
+
+/* Modal */
+.theme-unicorn .modal {
+  background-color: #ffffff;
+  color: #3a3a3a;
+  box-shadow: 0 0 20px rgba(192, 192, 192, 0.3);
+  border: 1px solid #c0c0c0;
+}
+
+.theme-unicorn .modal button {
+  background-color: #fdf6e3;
+  color: #3a3a3a;
+  border: 1px solid #c0c0c0;
+}
+
+/* DRAGON THEME */
+/* RED DRAGON THEME */
+.theme-dragon {
+  background: linear-gradient(to bottom, #2b0000, #4b0000);
+  color: #ffccaa;
+  font-family: 'Cinzel', serif;
+}
+
+/* Header and switcher */
+.theme-dragon .app-header {
+  background-color: #3a0000;
+  border-bottom: 2px solid #ff4500;
+}
+
+.theme-dragon .theme-switcher {
+  background-color: #4b0000;
+  color: #ffccaa;
+  border: 1px solid #ff4500;
+  box-shadow: 0 0 10px rgba(255, 69, 0, 0.4);
+}
+
+.theme-dragon .theme-switcher select {
+  background-color: #3a0000;
+  color: #ffccaa;
+  border: 1px solid #ff4500;
+}
+
+/* Inputs and selects */
+.theme-dragon input[type="text"],
+.theme-dragon select {
+  background-color: #2b0000;
+  color: #ffccaa;
+  border: 1px solid #ff4500;
+}
+
+/* Buttons */
+.theme-dragon button {
+  background-color: #ff4500;
+  color: #2b0000;
+  border: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(255, 69, 0, 0.6);
+}
+
+.theme-dragon button:hover {
+  background-color: #ff6347;
+}
+
+/* Preview text */
+.theme-dragon #previewSelections {
+  background-color: #3a0000;
+  color: #ffccaa;
+  border: 1px solid #ff4500;
+}
+
+/* Dropdown and custom rows */
+.theme-dragon .dropdown-row button,
+.theme-dragon .custom-row button {
+  background-color: #ff4500;
+  color: #2b0000;
+  border: none;
+}
+
+.theme-dragon .dropdown-row button:hover,
+.theme-dragon .custom-row button:hover {
+  background-color: #ff6347;
+}
+
+/* Map results */
+.theme-dragon #mapResults>div {
+  background-color: #2b0000;
+  color: #ffccaa;
+  box-shadow: 0 2px 6px rgba(255, 69, 0, 0.3);
+}
+
+/* Modal */
+.theme-dragon .modal {
+  background-color: #3a0000;
+  color: #ffccaa;
+  box-shadow: 0 0 20px rgba(255, 69, 0, 0.4);
+  border: 1px solid #ff4500;
+}
+
+.theme-dragon .modal button {
+  background-color: #ff4500;
+  color: #2b0000;
+  border: none;
+}

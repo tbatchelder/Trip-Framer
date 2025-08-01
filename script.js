@@ -348,3 +348,31 @@ document.getElementById("clearSelections").addEventListener("click", () => {
   alert("Trip history cleared.");
 });
 
+// Theme toggle functionality
+const themeSelect = document.getElementById('themeSelect');
+const body = document.body;
+
+// Available theme classes
+const themes = ['theme-light', 'theme-dark', 'theme-retro', 'theme-ocean', 'theme-unicorn', 'theme-dragon'];
+
+// Apply theme by removing old and adding new
+function applyTheme(themeName) {
+  themes.forEach(t => body.classList.remove(t));
+  body.classList.add(`theme-${themeName}`);
+  localStorage.setItem('selectedTheme', themeName);
+}
+
+// Load saved theme on startup
+function loadSavedTheme() {
+  const savedTheme = localStorage.getItem('selectedTheme') || 'light';
+  themeSelect.value = savedTheme;
+  applyTheme(savedTheme);
+}
+
+// Listen for dropdown changes
+themeSelect.addEventListener('change', (e) => {
+  applyTheme(e.target.value);
+});
+
+// Initialize on page load
+loadSavedTheme();
